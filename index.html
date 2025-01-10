@@ -43,10 +43,6 @@
                     <div class="skill">JavaScript</div>
                     <div class="skill">React</div>
                     <div class="skill">Node.js</div>
-                    <div class="skill">Web3</div>
-                    <div class="skill">NFT</div>
-                    <div class="skill">Design Graphic</div>
-                    <div class="skill">Jeux Navigateur</div>
                 </div>
             </div>
         </div>
@@ -89,38 +85,21 @@
 
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <form action="https://formspree.io/f/mvggdgqk" method="post">
-            <!-- Formulaire ici -->
-            <input type="text" name="name" placeholder="Nom">
-            <input type="email" name="email" placeholder="Adresse e-mail">
-            <textarea name="message" placeholder="Message"></textarea>
-            <button type="submit">Envoyer</button>
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Envoyer</button>
         </form>
-        <script>
-            const form = document.querySelector('form');
-            const formData = new FormData(form);
-    
-            fetch('https://formspree.io/f/mvggdgqk', {
-                method: 'POST',
-                body: formData,
-            })
-            .then((response) => response.json())
-            .then((data) => console.log(data))
-            .catch((error) => console.error(error));
-    
-            // Mettre à jour le formulaire après avoir soumis les données
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const formData = new FormData(form);
-                fetch('https://formspree.io/f/mvggdgqk', {
-                    method: 'POST',
-                    body: formData,
-                })
-                .then((response) => response.json())
-                .then((data) => console.log(data))
-                .catch((error) => console.error(error));
-            });
-        </script>
     </section>
 
     <footer class="footer">

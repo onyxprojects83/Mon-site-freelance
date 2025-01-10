@@ -73,11 +73,6 @@ const observerOptions = {
     threshold: 0.1
 };
 
-const img = new Image();
-img.src = '/images/logo.jpg';
-document.body.appendChild(img);
-
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -107,14 +102,3 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
-const form = document.querySelector('form');
-const formData = new FormData(form);
-
-fetch('https://formspree.io/f/mvggdgqk', {
-  method: 'POST',
-  body: formData,
-})
-.then((response) => response.json())
-.then((data) => console.log(data))
-.catch((error) => console.error(error));
