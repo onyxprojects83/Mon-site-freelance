@@ -22,18 +22,37 @@
         <h1>Contactez-moi</h1>
         <p>Remplissez le formulaire ci-dessous pour me contacter. Je vous répondrai rapidement.</p>
         
-        <form action="https://formspree.io/f/mvggdgqk" method="POST" class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/mvggdgqk" method="POST" class="contact-form">
             <label for="name">Nom complet :</label>
             <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required>
-            
+            <span id="nameError" class="error-message"></span>
+        
             <label for="email">Adresse email :</label>
             <input type="email" id="email" name="email" placeholder="Entrez votre adresse email" required>
-            
+        
             <label for="message">Message :</label>
             <textarea id="message" name="message" rows="5" placeholder="Votre message ici..." required></textarea>
-            
+            <span id="messageError" class="error-message"></span>
+        
             <button type="submit">Envoyer</button>
         </form>
     </div>
+
+    <div class="input-group">
+        <i class="fa fa-user"></i>
+        <input type="text" placeholder="Votre nom" />
+    </div>
+
+    <div class="loader">
+        <img src="images/logo.jpg" alt="Chargement..." />
+    </div>
+
+    <div class="parallax"></div>
+
+    <button id="backToTop">↑</button>
+
+
+    <script src="/script.js"></script>
+
 </body>
 </html>
