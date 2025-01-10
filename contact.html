@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mon Site Freelance</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="parrainage.html">Parrainage</a></li>
+        </ul>
+    </nav>
+    <main class="contact-main">
+        <h2>Contactez-moi</h2>
+        <form action="https://formspree.io/f/mvggdgqk" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+</body>
+</html>
